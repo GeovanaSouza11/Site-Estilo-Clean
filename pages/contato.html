@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Estilo Clean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- CSS (IMPORTANTE: ../ porque está na pasta pages) -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+
+        <div class="logo">
+            <img src="../imagens/logoempresa.jpeg" alt="Estilo Clean">
+        </div>
+
+        <nav class="nav">
+            <a href="../index.html#servicos">Serviços</a>
+            <a href="../index.html#sobre">Sobre</a>
+            <a href="../index.html#depoimentos">Depoimentos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- CONTATO -->
+<section class="contato">
+    <div class="container">
+
+        <h2>Entre em Contato</h2>
+        <p class="contato-sub">Preencha o formulário ou fale direto com a gente.</p>
+
+        <div class="contato-grid">
+
+            <!-- FORMULÁRIO -->
+                <form class="contato-form"
+                action="https://formsubmit.co/estilocleam2014@gmail.com"
+                method="POST"
+                onsubmit="return enviarContato()">
+
+                <!-- CONFIGURAÇÕES -->
+                <input type="hidden" name="_subject" value="Novo contato do site!">
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- CAMPOS -->
+                <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" id="email" placeholder="Seu email" required>
+                <input type="tel" name="telefone" id="telefone" placeholder="Telefone">
+                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+
+            <!-- INFORMAÇÕES -->
+            <div class="contato-info">
+                <h3>Informações</h3>
+
+                <p>
+                    <a href="https://wa.me/5516981453220?text=Olá, gostaria de saber mais sobre a limpeza de estofados!" target="_blank">
+                        📞 (16) 98145-3220
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://instagram.com/estiloclean2023" target="_blank">
+                        📸 Veja nossos resultados no Instagram
+                    </a>
+                </p>
+
+                <p>📍 Ribeirão Preto - SP</p>
+
+                <div class="contato-destaque">
+                    <p><strong>Atendimento rápido via WhatsApp 🚀</strong></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-bottom">
+        <p>&copy; 2026 Estilo Clean • Todos os direitos reservados</p>
+    </div>
+</footer>
+
+<!-- SCRIPT (está na mesma pasta /pages) -->
+<script src="script.js"></script>
+
+</body>
+</html>
