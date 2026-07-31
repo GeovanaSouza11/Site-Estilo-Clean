@@ -62,56 +62,32 @@ section {
 }
 
 /* HEADER / NAVEGAÇÃO */
-.header {
-    background: linear-gradient(90deg, var(--azul-escuro-bg), var(--azul-principal));
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.header.scrolled {
-    padding: 8px 0;
-    background: rgba(8, 23, 38, 0.95);
-    backdrop-filter: blur(10px);
-}
-
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px; /* <--- Adiciona um espaço de segurança entre a logo e o menu */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 15px; 
+    margin-right: 30px; /* <--- Garante um espaçamento extra à direita da imagem */
 }
 
-.logo span {
-    color: white;
-    font-weight: 600;
-}
-
-.logo-icon {
-    font-size: 28px;
-}
-
+/* Reduz a altura gigante da logo no computador para não empurrar o menu */
 .logo img {
-    height: 200px;
+    height: 75px; /* <--- Altura ideal para o topo (ajuste se quiser maior ou menor) */
+    width: auto;
+    display: block;
     transition: all 0.3s ease;
 }
 
 .header.scrolled .logo img {
-    height: 150px;
+    height: 60px; /* Altura ao rolar a página */
 }
 
-.logo h1 {
-    font-size: 22px;
-    color: white;
-}
 
 /* MENU DE NAVEGAÇÃO */
 .nav {
