@@ -556,38 +556,79 @@ section {
     opacity: 0.7;
 }
 
-/* DESIGN RESPONSIVO PARA CELULAR (Telas até 768px) */
+
 @media (max-width: 768px) {
-    /* Força a grade de cartões a ter 1 só coluna no celular */
+
+    /* 1. CONFIGURAÇÃO DO HEADER (AZUL ESCURO) */
+    .header {
+        background-color: #003049 !important; /* Cor do fundo azul */
+        background-image: none !important;
+        position: relative !important;
+        width: 100% !important;
+    }
+
+    .header .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px 10px !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    /* Logo ajustada para o celular */
+    .logo {
+        margin-right: 0 !important;
+    }
+
+    .logo img {
+        height: 70px !important;    /* Limita a altura no celular */
+        width: auto !important;
+        max-width: 90% !important;  /* Impede de vazar na lateral */
+        object-fit: contain !important;
+    }
+
+    /* Menu com texto branco e centralizado */
+    .nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    .nav a {
+        color: #ffffff !important;
+        font-size: 14px !important;
+    }
+
+    /* 2. CONFIGURAÇÃO DOS CARTÕES (ESTATÍSTICAS) */
+    /* Empilha os 3 cartões um embaixo do outro no celular */
     .stats,
     .estatisticas,
-    .stats-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* Coloca um em cima do outro */
+    .stats-grid,
+    .hero-stats {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
         gap: 15px !important;
         padding: 0 15px !important;
         width: 100% !important;
-    }
-
-    /* Caso sua seção use Flexbox em vez de Grid */
-    .stats-container {
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-
-    /* Ajusta o tamanho dos cartões individuais */
-    .stat-card,
-    .stat-item {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 20px 15px !important;
         box-sizing: border-box !important;
     }
 
-    /* Suaviza o tamanho dos números para não estourarem */
+    /* Cartão individual ocupando a largura total sem cortar */
+    .stat-card,
+    .stat-item,
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px 15px !important;
+    }
+
+    /* Tamanho dos números dos cartões */
     .stat-card h3,
-    .stat-card .number,
-    .stat-number {
+    .stat-number,
+    .number {
         font-size: 32px !important;
     }
 }
