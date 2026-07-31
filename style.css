@@ -558,49 +558,32 @@ section {
 
 /* DESIGN RESPONSIVO PARA CELULAR (Telas até 768px) */
 @media (max-width: 768px) {
-    /* Força o fundo azul escuro no topo */
-    .header {
-        background-color: #003049 !important; /* Substitua pela cor exata do seu azul se for diferente */
-        position: relative;
-        width: 100%;
-    }
-
-    /* Organiza o conteúdo do topo centralizado */
+    /* Ajustes do Header para mobile */
     .header .container {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        padding: 15px 10px;
+        width: 100%; /* O container ocupa a largura total disponível */
+        padding: 15px;
     }
 
-    /* Reduz a logo APENAS no celular para não estourar o topo */
-    .logo {
-        margin-right: 0 !important; /* Remove a margem lateral no celular */
-    }
-
+    /* Trava a logo para nunca ser maior que a tela */
     .logo img {
-        height: 70px !important; /* Altura ideal para tela de celular */
-        width: auto;
+        height: 70px !important; /* Altura controlada */
+        max-width: 90%;          /* Nunca passa de 90% da largura da tela */
+        width: auto;             /* Mantém a proporção */
+        object-fit: contain;
     }
 
-    /* Ajusta as palavras do menu para ficarem visíveis e bem dispostas */
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    /* Garante que imagens e vídeos no resto do site também não vazem */
+    img, video, embed, object {
+        max-width: 100%;
+        height: auto;
     }
 
-    .nav a {
-        color: #ffffff !important; /* Força o texto a ficar branco */
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    /* Seção principal (Banner) */
-    .hero h1 {
-        font-size: 28px;
-        line-height: 1.3;
+    /* Impede que títulos grandes quebrem a tela */
+    h1, h2, h3 {
+        word-wrap: break-word; /* Força a quebra de linha se a palavra for muito longa */
+        overflow-wrap: break-word;
     }
 }
 
