@@ -542,59 +542,51 @@ section {
     opacity: 0.7;
 }
 
-/* DESIGN RESPONSIVO AJUSTADO (CELULARES E TABLETS) */
+/* DESIGN RESPONSIVO PARA CELULAR (Telas até 768px) */
 @media (max-width: 768px) {
-    /* Ajuste do topo (Header) */
+    /* Força o fundo azul escuro no topo */
+    .header {
+        background-color: #003049 !important; /* Substitua pela cor exata do seu azul se for diferente */
+        position: relative;
+        width: 100%;
+    }
+
+    /* Organiza o conteúdo do topo centralizado */
     .header .container {
         flex-direction: column;
-        gap: 15px;
-        padding: 10px;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 10px;
     }
 
-    /* Reduz a logo para não estourar a tela do celular */
+    /* Reduz a logo APENAS no celular para não estourar o topo */
+    .logo {
+        margin-right: 0 !important; /* Remove a margem lateral no celular */
+    }
+
     .logo img {
-        height: 70px !important; 
-        max-width: 100%;
-        object-fit: contain;
+        height: 70px !important; /* Altura ideal para tela de celular */
+        width: auto;
     }
 
-    .header.scrolled .logo img {
-        height: 55px !important;
-    }
-
-    /* Menu alinhado e legível */
+    /* Ajusta as palavras do menu para ficarem visíveis e bem dispostas */
     .nav {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
+        gap: 15px;
     }
 
     .nav a {
-        font-size: 13px;
+        color: #ffffff !important; /* Força o texto a ficar branco */
+        font-size: 14px;
+        font-weight: 500;
     }
 
-    /* Seção Hero 
-    .hero {
-        padding: 40px 15px;
-    }
-
+    /* Seção principal (Banner) */
     .hero h1 {
-        font-size: 26px;
+        font-size: 28px;
         line-height: 1.3;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    /* Outros elementos responsivos */
-    .stats {
-        grid-template-columns: 1fr;
-    }
-
-    .sobre-conteudo,
-    .contato-grid {
-        grid-template-columns: 1fr;
     }
 }
 
