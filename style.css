@@ -558,32 +558,37 @@ section {
 
 /* DESIGN RESPONSIVO PARA CELULAR (Telas até 768px) */
 @media (max-width: 768px) {
-    /* Ajustes do Header para mobile */
-    .header .container {
-        flex-direction: column;
-        align-items: center;
-        width: 100%; /* O container ocupa a largura total disponível */
-        padding: 15px;
+    /* Força a grade de cartões a ter 1 só coluna no celular */
+    .stats,
+    .estatisticas,
+    .stats-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Coloca um em cima do outro */
+        gap: 15px !important;
+        padding: 0 15px !important;
+        width: 100% !important;
     }
 
-    /* Trava a logo para nunca ser maior que a tela */
-    .logo img {
-        height: 70px !important; /* Altura controlada */
-        max-width: 90%;          /* Nunca passa de 90% da largura da tela */
-        width: auto;             /* Mantém a proporção */
-        object-fit: contain;
+    /* Caso sua seção use Flexbox em vez de Grid */
+    .stats-container {
+        flex-direction: column !important;
+        width: 100% !important;
     }
 
-    /* Garante que imagens e vídeos no resto do site também não vazem */
-    img, video, embed, object {
-        max-width: 100%;
-        height: auto;
+    /* Ajusta o tamanho dos cartões individuais */
+    .stat-card,
+    .stat-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
     }
 
-    /* Impede que títulos grandes quebrem a tela */
-    h1, h2, h3 {
-        word-wrap: break-word; /* Força a quebra de linha se a palavra for muito longa */
-        overflow-wrap: break-word;
+    /* Suaviza o tamanho dos números para não estourarem */
+    .stat-card h3,
+    .stat-card .number,
+    .stat-number {
+        font-size: 32px !important;
     }
 }
 
