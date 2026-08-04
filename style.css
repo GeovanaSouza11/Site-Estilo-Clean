@@ -556,9 +556,54 @@ section {
     opacity: 0.7;
 }
 
+/* ESTILO DO BOTÃO FLUTUANTE DO WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;            /* Distância do fundo da tela */
+    right: 25px;             /* Distância da direita da tela */
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Verde oficial do WhatsApp */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;           /* Garante que fique por cima de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Tamanho do ícone dentro da bolinha */
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Efeito ao passar o mouse (no computador) */
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+    background-color: #20ba5a;
+}
 
 /*DESIGN RESPONSIVO PARA CELULAR (Telas até 768px) */
 @media (max-width: 768px) {
+
+    /* Ajuste da bolinha do WhatsApp em telas menores */
+    .whatsapp-float {
+        width: 50px !important;
+        height: 50px !important;
+        bottom: 20px !important;
+        right: 20px !important;
+    }
+    
+    .whatsapp-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+}
 
     /* 1. HEADER (TOPO AZUL) & LOGO */
     .header {
