@@ -557,9 +557,7 @@ section {
 }
 
 
-/* ===================================================
-   DESIGN RESPONSIVO PARA CELULAR (Telas até 768px)
-   =================================================== */
+/*DESIGN RESPONSIVO PARA CELULAR (Telas até 768px) */
 @media (max-width: 768px) {
 
     /* 1. HEADER (TOPO AZUL) & LOGO */
