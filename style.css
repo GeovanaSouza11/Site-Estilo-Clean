@@ -557,10 +557,79 @@ section {
 }
 
 
-/* AJUSTE DA PÁGINA DE CONTATO NO CELULAR */
+/* ===================================================
+   DESIGN RESPONSIVO PARA CELULAR (Telas até 768px)
+   =================================================== */
 @media (max-width: 768px) {
 
-    /* Empilha o formulário e a caixa de informações */
+    /* 1. HEADER (TOPO AZUL) & LOGO */
+    .header {
+        background-color: #003049 !important; /* Fundo azul escuro */
+        background-image: none !important;
+        position: relative !important;
+        width: 100% !important;
+    }
+
+    .header .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px 10px !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .logo {
+        margin-right: 0 !important;
+    }
+
+    .logo img {
+        height: 70px !important;    /* Controla a altura no celular */
+        width: auto !important;
+        max-width: 90% !important;  /* Trava para não quebrar o layout */
+        object-fit: contain !important;
+    }
+
+    .nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    .nav a {
+        color: #ffffff !important;   /* Texto do menu branco */
+        font-size: 14px !important;
+    }
+
+    /* 2. CARTÕES DE ESTATÍSTICAS (HOME) */
+    .stats,
+    .estatisticas,
+    .stats-grid,
+    .hero-stats {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 0 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .stat-card,
+    .stat-item,
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px 15px !important;
+    }
+
+    .stat-card h3,
+    .stat-number,
+    .number {
+        font-size: 32px !important;
+    }
+
+    /* 3. PÁGINA DE CONTATO */
     .contato-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -570,7 +639,6 @@ section {
         box-sizing: border-box !important;
     }
 
-    /* Formulário ajustado para a largura da tela */
     .contato-form {
         width: 100% !important;
         display: flex !important;
@@ -578,30 +646,27 @@ section {
         gap: 12px !important;
     }
 
-    /* Trava os campos (inputs) para não vazarem na lateral */
     .contato-form input,
     .contato-form textarea {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        font-size: 16px !important; /* Evita que o iPhone dê zoom automático ao clicar no campo */
+        font-size: 16px !important; /* Previne zoom automático no iOS */
     }
 
-    /* Botão ocupando a largura total */
     .contato-form button {
         width: 100% !important;
         padding: 14px !important;
     }
 
-    /* Ajuste do bloco de Informações/Links */
     .contato-info {
         width: 100% !important;
         box-sizing: border-box !important;
-        text-align: center !important; /* Centraliza os textos e ícones no celular */
+        text-align: center !important;
     }
 
     .contato-info p {
-        word-break: break-word !important; /* Impede que links longos quebrem o layout */
+        word-break: break-word !important;
     }
 }
 
